@@ -1,11 +1,11 @@
+import sys
+
+from asciimatics.effects import Print
 from asciimatics.renderers import FigletText, Fire
 from asciimatics.renderers import SpeechBubble
 from asciimatics.scene import Scene
 from asciimatics.screen import Screen
-from asciimatics.effects import Print
-from asciimatics.exceptions import ResizeScreenError
 from pyfiglet import Figlet
-import sys
 
 
 def animation(screen):
@@ -21,7 +21,7 @@ def animation(screen):
               transparent=False,
               ),
         Print(screen,
-              FigletText("Real Practic Game", "banner"),
+              FigletText("Real Practice Game", "banner"),
               screen.height - 15,
               colour=Screen.COLOUR_WHITE,
               bg=Screen.COLOUR_WHITE,
@@ -38,6 +38,10 @@ def animation(screen):
 
 
 def run_screensaver():
+    """
+
+    :rtype: object
+    """
     Screen.wrapper(animation)
 
 
